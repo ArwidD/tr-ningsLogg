@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <h1>Träningslogg</h1>
-    
+  <div class="workout-tabs">
     <div class="tabs">
       <button 
         @click="activeTab = 'form'" 
@@ -23,19 +21,23 @@
 </template>
 
 <script>
-import WorkoutForm from './components/WorkoutForm.vue'
-import WorkoutList from './components/WorkoutList.vue'
+import WorkoutForm from './WorkoutForm.vue'
+import WorkoutList from './WorkoutList.vue'
 
 export default {
+  name: 'WorkoutTabs',
+  
   components: {
     WorkoutForm,
     WorkoutList
   },
+
   data() {
     return {
       activeTab: 'form'
     }
   },
+
   methods: {
     onWorkoutSaved() {
       this.activeTab = 'list'

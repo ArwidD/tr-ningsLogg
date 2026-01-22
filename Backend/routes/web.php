@@ -13,12 +13,15 @@
 |
 */
 
+
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 //skapa nya workouts
 $router->get('api/workouts', 'WorkoutController@index');
 $router->post('api/workouts', 'WorkoutController@store');
+
+
 
 //registrera användare
 $router->get('/register', 'UserController@showRegister');
