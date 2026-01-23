@@ -20,6 +20,7 @@ $router->get('/', function () use ($router) {
 //skapa nya workouts
 $router->get('api/workouts', 'WorkoutController@index');
 $router->post('api/workouts', 'WorkoutController@store');
+$router->delete('api/workouts/{id}', 'WorkoutController@destroy');
 
 
 
